@@ -8,6 +8,7 @@ const {
 
 // get all employees
 const getAll = async (req, res, next) => {
+  //#swagger.tags=['Employees']
   try {
     const result = await mongodb
       .getDatabase()
@@ -30,6 +31,7 @@ const getAll = async (req, res, next) => {
 
 // get contact by ID
 const getById = async (req, res, next) => {
+  //#swagger.tags=['Employees']
   try {
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid contact id to get a contact.');
@@ -57,6 +59,7 @@ const getById = async (req, res, next) => {
 
 // create one contact
 const createEmployee = async (req, res, next) => {
+  //#swagger.tags=['Employees']
   try {
     const employee = {
       employeeId: req.body.employeeId,
