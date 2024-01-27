@@ -5,18 +5,13 @@
     "description": "New Employees API",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "https://cse341-project02-32p3.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "http",
-    "https"
-  ],
+  "schemes": ["https"],
   "paths": {
     "/": {
       "get": {
-        "tags": [
-          "Home"
-        ],
+        "tags": ["Home"],
         "description": "",
         "responses": {
           "200": {
@@ -25,25 +20,11 @@
         }
       }
     },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/employees/": {
       "get": {
-        "tags": [
-          "Employees"
-        ],
+        "tags": ["Employees"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "OK"
@@ -51,9 +32,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Employees"
-        ],
+        "tags": ["Employees"],
         "description": "",
         "parameters": [
           {
@@ -99,13 +78,9 @@
     },
     "/employees/{id}": {
       "get": {
-        "tags": [
-          "Employees"
-        ],
+        "tags": ["Employees"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -124,9 +99,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Employees"
-        ],
+        "tags": ["Employees"],
         "description": "",
         "parameters": [
           {
@@ -176,6 +149,7 @@
         }
       },
       "delete": {
+        "tags": ["Employees"],
         "description": "",
         "parameters": [
           {

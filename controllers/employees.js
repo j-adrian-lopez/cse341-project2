@@ -119,6 +119,7 @@ const updateEmployee = async (req, res, next) => {
 
 // delete contact by ID
 const deleteById = async (req, res, next) => {
+  //#swagger.tags=['Employees']
   try {
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid contact id to delete a contact.');
