@@ -1,11 +1,37 @@
 // Localhost
 ### Get All
-GET http://localhost:3000/contacts
+GET http://localhost:3000/employees
 
-### Create Contact
-POST http://localhost:3000/users HTTP/1.1
+### Get by Id
+GET http://localhost:3000/employees/65b53b13a3c9954b3d01092f
+
+### Create employee
+POST http://localhost:3000/employees HTTP/1.1
 content-type: application/json
 
 {
-
+"employeeId": "5",
+"firstName": "Albert",
+"lastName": "Martens",
+"email": "almart@email.com",
+"position": "Janitor",
+"department": "General Services",
+"salary": 35000
 }
+
+### Update Employee
+PUT http://localhost:3000/employees/65b53b13a3c9954b3d01092e HTTP/1.1
+content-type: application/json
+
+{
+"employeeId": 1,
+    "firstName": "Juan",
+    "lastName": "Jara",
+    "position": "Customer Support Assistant",
+    "department": "Customer Service",
+    "salary": 60000,
+    "email": "majara@emp.net"
+}
+
+### Delete employee
+DELETE http://localhost:3000/employees/65b56c1804ad2b23afb17ba0
