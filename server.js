@@ -74,7 +74,7 @@ app.get('/', (req, res) => {
       ? // ? `${JSON.stringify(req.session)}`
         `Logged in as ${req.session.user.displayName}<br>` +
           `Go to <a href="/api-docs">Documentation<a>`
-      : `Welcome to the Employees Api Home Page. You are logged Out<br>` +
+      : `Welcome to the Employees Api Home Page. You are logged out<br>` +
           `<a href="/login">Login with Github<a>`
   );
 });
