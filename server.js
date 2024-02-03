@@ -73,8 +73,9 @@ app.get('/', (req, res) => {
     req.session.user !== undefined
       ? // ? `${JSON.stringify(req.session)}`
         `Logged in as ${req.session.user.displayName}<br>` +
-          `Go to <a href="/api-docs">Documentation<a>`
-      : `Welcome to the Employees Api Home Page. You are logged out<br>` +
+          `Go to <a href="/api-docs">Documentation<a><br><br>` +
+          `<a href="/logout">Logout<a>`
+      : `Welcome to the Example Company Api Home Page. You are logged out<br>` +
           `<a href="/login">Login with Github<a>`
   );
 });

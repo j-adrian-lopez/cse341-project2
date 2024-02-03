@@ -7,29 +7,13 @@
   },
   "host": "cse341-project02-32p3.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["https"],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/employees/": {
       "get": {
-        "tags": [
-          "Employees"
-        ],
+        "tags": ["Employees"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "OK"
@@ -37,9 +21,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Employees"
-        ],
+        "tags": ["Employees"],
         "description": "",
         "parameters": [
           {
@@ -88,13 +70,9 @@
     },
     "/employees/{id}": {
       "get": {
-        "tags": [
-          "Employees"
-        ],
+        "tags": ["Employees"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -116,9 +94,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Employees"
-        ],
+        "tags": ["Employees"],
         "description": "",
         "parameters": [
           {
@@ -171,9 +147,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Employees"
-        ],
+        "tags": ["Employees"],
         "description": "",
         "parameters": [
           {
@@ -198,13 +172,9 @@
     },
     "/departments/": {
       "get": {
-        "tags": [
-          "Departments"
-        ],
+        "tags": ["Departments"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "OK"
@@ -212,9 +182,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Departments"
-        ],
+        "tags": ["Departments"],
         "description": "",
         "parameters": [
           {
@@ -251,13 +219,9 @@
     },
     "/departments/{id}": {
       "get": {
-        "tags": [
-          "Departments"
-        ],
+        "tags": ["Departments"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -279,9 +243,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Departments"
-        ],
+        "tags": ["Departments"],
         "description": "",
         "parameters": [
           {
@@ -322,9 +284,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Departments"
-        ],
+        "tags": ["Departments"],
         "description": "",
         "parameters": [
           {
