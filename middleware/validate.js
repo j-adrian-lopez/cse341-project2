@@ -19,6 +19,19 @@ const employeeValidationRules = () => {
   ];
 };
 
+const departmentValidationRules = () => {
+  return [
+    body('department').notEmpty().isString(),
+    body('employees')
+      .notEmpty()
+      .isNumeric()
+      .withMessage('Employees must be a number'),
+    body('average_salary')
+      .isNumeric()
+      .withMessage('The average salary must be a number'),
+  ];
+};
+
 const validate = (req, res, next) => {
   const errors = validationResult(req);
   if (errors.isEmpty()) {
@@ -34,5 +47,6 @@ const validate = (req, res, next) => {
 
 module.exports = {
   employeeValidationRules,
+  departmentValidationRules,
   validate,
 };

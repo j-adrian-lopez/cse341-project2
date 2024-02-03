@@ -1,19 +1,35 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Project 2",
-    "description": "New Employees API",
+    "title": "Project 2 Part 2",
+    "description": "Example Company API",
     "version": "1.0.0"
   },
   "host": "cse341-project02-32p3.onrender.com",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "https"
+  ],
   "paths": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/employees/": {
       "get": {
-        "tags": ["Employees"],
+        "tags": [
+          "Employees"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -21,7 +37,9 @@
         }
       },
       "post": {
-        "tags": ["Employees"],
+        "tags": [
+          "Employees"
+        ],
         "description": "",
         "parameters": [
           {
@@ -31,7 +49,7 @@
               "type": "object",
               "properties": {
                 "employeeId": {
-                  "example": "number"
+                  "example": "any"
                 },
                 "firstName": {
                   "example": "any"
@@ -40,7 +58,7 @@
                   "example": "any"
                 },
                 "email": {
-                  "example": "email@email.com"
+                  "example": "any"
                 },
                 "position": {
                   "example": "any"
@@ -49,7 +67,7 @@
                   "example": "any"
                 },
                 "salary": {
-                  "example": "number"
+                  "example": "any"
                 }
               }
             }
@@ -70,9 +88,13 @@
     },
     "/employees/{id}": {
       "get": {
-        "tags": ["Employees"],
+        "tags": [
+          "Employees"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -94,7 +116,9 @@
         }
       },
       "put": {
-        "tags": ["Employees"],
+        "tags": [
+          "Employees"
+        ],
         "description": "",
         "parameters": [
           {
@@ -110,7 +134,7 @@
               "type": "object",
               "properties": {
                 "employeeId": {
-                  "example": "number"
+                  "example": "any"
                 },
                 "firstName": {
                   "example": "any"
@@ -119,7 +143,7 @@
                   "example": "any"
                 },
                 "email": {
-                  "example": "email@email.com"
+                  "example": "any"
                 },
                 "position": {
                   "example": "any"
@@ -128,7 +152,7 @@
                   "example": "any"
                 },
                 "salary": {
-                  "example": "number"
+                  "example": "any"
                 }
               }
             }
@@ -147,7 +171,160 @@
         }
       },
       "delete": {
-        "tags": ["Employees"],
+        "tags": [
+          "Employees"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/departments/": {
+      "get": {
+        "tags": [
+          "Departments"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Departments"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "department": {
+                  "example": "any"
+                },
+                "employees": {
+                  "example": "any"
+                },
+                "average_salary": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          }
+        }
+      }
+    },
+    "/departments/{id}": {
+      "get": {
+        "tags": [
+          "Departments"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Departments"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "department": {
+                  "example": "any"
+                },
+                "employees": {
+                  "example": "any"
+                },
+                "average_salary": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Departments"
+        ],
         "description": "",
         "parameters": [
           {
